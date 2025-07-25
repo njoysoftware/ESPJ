@@ -22,3 +22,31 @@ Aplikasi ini merupakan sistem pelaporan Surat Pertanggungjawaban (SPJ) di lingku
 ```bash
 git clone https://github.com/njoysoftware/espj.git
 cd espj
+```
+
+### 2. Install Dependencies
+Jika menggunakan Composer:
+```bash
+composer install
+```
+### 3. Konfigurasi Environment
+ubah file env menjadi .env
+
+### 4. Import Database
+import db_app.sql kedalam database 
+
+### 5 jalankan Localhost
+php spark serve
+atau : localhost
+
+## 📁 Struktur Folder Penting
+- /app/Controllers – Logika kontrol aplikasi
+- /app/Models – Interaksi dengan database
+- /app/Views – Tampilan halaman
+- /public/ – Akses publik (index.php, asset)
+- /database/ – File SQL, migrasi
+
+
+## Lisensi
+Aplikasi ini dikembangkan untuk keperluan internal Bawaslu Kabupaten dan tidak untuk penggunaan komersial. Untuk penggunaan lebih lanjut, silakan hubungi pengelola sistem.
+
