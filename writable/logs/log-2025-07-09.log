@@ -1,0 +1,1489 @@
+DEBUG - 2025-07-09 12:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 12:15:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-09 12:15:11 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_app', 3306, '', 0)
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\spj\app\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Login->index()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\ci4\spj\app\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Login->index()
+#7 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-09 12:15:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+DEBUG - 2025-07-09 12:15:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 12:15:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-09 12:15:16 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_app', 3306, '', 0)
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\spj\app\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Login->index()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\ci4\spj\app\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Login->index()
+#7 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-09 12:15:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 13:26:57 --> CodeIgniter\Exceptions\CriticalError: The required PHP extension "sqlite3" is not loaded. Install and enable it to use "SQLite3" driver.
+[Method: GET, Route: login]
+in SYSTEMPATH\Database\Database.php on line 182.
+ 1 SYSTEMPATH\Database\Database.php(59): CodeIgniter\Database\Database->checkDbExtension('SQLite3')
+ 2 SYSTEMPATH\Database\Config.php(82): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Model.php(155): CodeIgniter\Database\Config::connect('default')
+ 4 SYSTEMPATH\Config\Factories.php(236): CodeIgniter\Model->__construct(null)
+ 5 SYSTEMPATH\Config\Factories.php(170): CodeIgniter\Config\Factories::createInstance('models', 'App\\Models\\ModelKecamatan', [...])
+ 6 SYSTEMPATH\Common.php(804): CodeIgniter\Config\Factories::__callStatic('models', [...])
+ 7 APPPATH\Controllers\Login.php(9): model('App\\Models\\ModelKecamatan')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+DEBUG - 2025-07-09 13:29:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-09 13:29:32 --> Exception: Unable to prepare statement: 1, no such table: t_kecamatan in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:176
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(176): SQLite3->query('SELECT *\nFROM `...')
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\spj\app\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Login->index()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-07-09 13:29:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: t_kecamatan
+[Method: GET, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 13:29:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: t_kecamatan
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 181.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `t_kecamatan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `t_kecamatan`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 13:29:32 --> [Caused by] Exception: Unable to prepare statement: 1, no such table: t_kecamatan
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 176.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(176): SQLite3->query('SELECT *
+FROM `t_kecamatan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `t_kecamatan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `t_kecamatan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+DEBUG - 2025-07-09 13:31:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-09 13:31:21 --> Error connecting to the database: CodeIgniter\Database\Exceptions\DatabaseException: SQLite3 doesn't support persistent connections. in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:102
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\SQLite3\Connection->connect(true)
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\spj\app\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Login->index()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-07-09 13:31:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLite3]: SQLite3 doesn't support persistent connections.
+[Method: GET, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+DEBUG - 2025-07-09 13:31:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-09 13:31:45 --> Exception: Unable to prepare statement: 1, no such table: t_kecamatan in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:176
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(176): SQLite3->query('SELECT *\nFROM `...')
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\spj\app\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Login->index()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-07-09 13:31:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: t_kecamatan
+[Method: GET, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 13:31:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: t_kecamatan
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 181.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `t_kecamatan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `t_kecamatan`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 13:31:45 --> [Caused by] Exception: Unable to prepare statement: 1, no such table: t_kecamatan
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 176.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(176): SQLite3->query('SELECT *
+FROM `t_kecamatan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `t_kecamatan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `t_kecamatan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 13:42:42 --> Error: Undefined constant "Config\SQLite3"
+[Method: GET, Route: login]
+in APPPATH\Config\Database.php on line 203.
+ 1 SYSTEMPATH\Config\Factories.php(236): Config\Database->__construct()
+ 2 SYSTEMPATH\Config\Factories.php(170): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Database', [])
+ 3 SYSTEMPATH\Config\Factories.php(189): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 4 SYSTEMPATH\Common.php(210): CodeIgniter\Config\Factories::get('config', 'Config\\Database')
+ 5 SYSTEMPATH\Database\Config.php(61): config('Config\\Database')
+ 6 SYSTEMPATH\Model.php(155): CodeIgniter\Database\Config::connect(null)
+ 7 SYSTEMPATH\Config\Factories.php(236): CodeIgniter\Model->__construct(null)
+ 8 SYSTEMPATH\Config\Factories.php(170): CodeIgniter\Config\Factories::createInstance('models', 'App\\Models\\ModelKecamatan', [...])
+ 9 SYSTEMPATH\Common.php(804): CodeIgniter\Config\Factories::__callStatic('models', [...])
+10 APPPATH\Controllers\Login.php(9): model('App\\Models\\ModelKecamatan')
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+DEBUG - 2025-07-09 13:45:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-09 13:45:26 --> Exception: Unable to prepare statement: 1, no such table: t_kecamatan in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:176
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(176): SQLite3->query('SELECT *\nFROM `...')
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\spj\app\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Login->index()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-07-09 13:45:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: t_kecamatan
+[Method: GET, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 13:45:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: t_kecamatan
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 181.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `t_kecamatan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `t_kecamatan`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 13:45:26 --> [Caused by] Exception: Unable to prepare statement: 1, no such table: t_kecamatan
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 176.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(176): SQLite3->query('SELECT *
+FROM `t_kecamatan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `t_kecamatan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `t_kecamatan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+DEBUG - 2025-07-09 13:50:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-09 13:51:06 --> Exception: Unable to prepare statement: 1, near "SHOW": syntax error in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:176
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(176): SQLite3->query('SHOW COLUMNS FR...')
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FR...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FR...')
+#3 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FR...')
+#4 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-09 13:51:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "SHOW": syntax error
+[Method: GET, Route: rab/datarab]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_rab`')
+ 2 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 3 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 4 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 5 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 13:51:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "SHOW": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 181.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FROM `t_rab`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FROM `t_rab`')
+ 3 APPPATH\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_rab`')
+ 4 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 5 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 6 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 7 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 13:51:06 --> [Caused by] Exception: Unable to prepare statement: 1, near "SHOW": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 176.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(176): SQLite3->query('SHOW COLUMNS FROM `t_rab`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FROM `t_rab`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FROM `t_rab`')
+ 4 APPPATH\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_rab`')
+ 5 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 6 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 7 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 8 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+DEBUG - 2025-07-09 13:54:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-09 13:54:43 --> Exception: Unable to prepare statement: 1, near "SHOW": syntax error in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:176
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(176): SQLite3->query('SHOW COLUMNS FR...')
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FR...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FR...')
+#3 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FR...')
+#4 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-09 13:54:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "SHOW": syntax error
+[Method: GET, Route: rab/datarab]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_rab`')
+ 2 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 3 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 4 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 5 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 13:54:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "SHOW": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 181.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FROM `t_rab`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FROM `t_rab`')
+ 3 APPPATH\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_rab`')
+ 4 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 5 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 6 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 7 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 13:54:43 --> [Caused by] Exception: Unable to prepare statement: 1, near "SHOW": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 176.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(176): SQLite3->query('SHOW COLUMNS FROM `t_rab`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FROM `t_rab`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FROM `t_rab`')
+ 4 APPPATH\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_rab`')
+ 5 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 6 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 7 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 8 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+DEBUG - 2025-07-09 13:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 13:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-09 13:54:48 --> Exception: Unable to prepare statement: 1, near "SHOW": syntax error in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:176
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(176): SQLite3->query('SHOW COLUMNS FR...')
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FR...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FR...')
+#3 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FR...')
+#4 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Kuitansi.php(105): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Kuitansi->data()
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kuitansi))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-09 13:54:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "SHOW": syntax error
+[Method: GET, Route: kuitansi/data]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_kuitansi`')
+ 2 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 3 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 4 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 5 APPPATH\Controllers\Kuitansi.php(105): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kuitansi->data()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kuitansi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 13:54:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "SHOW": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 181.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FROM `t_kuitansi`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FROM `t_kuitansi`')
+ 3 APPPATH\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_kuitansi`')
+ 4 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 5 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 6 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 7 APPPATH\Controllers\Kuitansi.php(105): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kuitansi->data()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kuitansi))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 13:54:48 --> [Caused by] Exception: Unable to prepare statement: 1, near "SHOW": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 176.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(176): SQLite3->query('SHOW COLUMNS FROM `t_kuitansi`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FROM `t_kuitansi`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FROM `t_kuitansi`')
+ 4 APPPATH\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_kuitansi`')
+ 5 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 6 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 7 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 8 APPPATH\Controllers\Kuitansi.php(105): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kuitansi->data()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kuitansi))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+DEBUG - 2025-07-09 13:54:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 14:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 14:10:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-09 14:10:03 --> Exception: Unable to prepare statement: 1, near "SHOW": syntax error in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:176
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(176): SQLite3->query('SHOW COLUMNS FR...')
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FR...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FR...')
+#3 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FR...')
+#4 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Setting.php(71): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Setting->pejabat()
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-09 14:10:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "SHOW": syntax error
+[Method: GET, Route: setting/pejabat]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_pejabat`')
+ 2 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 3 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 4 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 5 APPPATH\Controllers\Setting.php(71): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setting->pejabat()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:10:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "SHOW": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 181.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FROM `t_pejabat`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FROM `t_pejabat`')
+ 3 APPPATH\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_pejabat`')
+ 4 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 5 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 6 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 7 APPPATH\Controllers\Setting.php(71): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setting->pejabat()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:10:03 --> [Caused by] Exception: Unable to prepare statement: 1, near "SHOW": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 176.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(176): SQLite3->query('SHOW COLUMNS FROM `t_pejabat`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FROM `t_pejabat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FROM `t_pejabat`')
+ 4 APPPATH\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_pejabat`')
+ 5 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 6 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 7 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 8 APPPATH\Controllers\Setting.php(71): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setting->pejabat()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+DEBUG - 2025-07-09 14:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-09 14:12:45 --> Exception: Unable to prepare statement: 1, near "SHOW": syntax error in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:176
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(176): SQLite3->query('SHOW COLUMNS FR...')
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FR...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FR...')
+#3 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FR...')
+#4 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Setting.php(71): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Setting->pejabat()
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-09 14:12:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "SHOW": syntax error
+[Method: GET, Route: setting/pejabat]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_pejabat`')
+ 2 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 3 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 4 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 5 APPPATH\Controllers\Setting.php(71): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setting->pejabat()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:12:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "SHOW": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 181.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FROM `t_pejabat`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FROM `t_pejabat`')
+ 3 APPPATH\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_pejabat`')
+ 4 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 5 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 6 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 7 APPPATH\Controllers\Setting.php(71): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setting->pejabat()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:12:45 --> [Caused by] Exception: Unable to prepare statement: 1, near "SHOW": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 176.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(176): SQLite3->query('SHOW COLUMNS FROM `t_pejabat`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FROM `t_pejabat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FROM `t_pejabat`')
+ 4 APPPATH\Models\GroceryCrudModel.php(428): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_pejabat`')
+ 5 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 6 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 7 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 8 APPPATH\Controllers\Setting.php(71): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setting->pejabat()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+DEBUG - 2025-07-09 14:19:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-09 14:19:09 --> Exception: The table name does not exist. Please check you database and try again.
+[Method: GET, Route: setting/pejabat]
+in APPPATH\Libraries\GroceryCrud.php on line 4735.
+ 1 APPPATH\Libraries\GroceryCrud.php(4230): App\Libraries\GroceryCrud->get_table()
+ 2 APPPATH\Libraries\GroceryCrud.php(4247): App\Libraries\GroceryCrud->pre_render()
+ 3 APPPATH\Controllers\Setting.php(71): App\Libraries\GroceryCrud->render()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setting->pejabat()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+DEBUG - 2025-07-09 14:19:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 14:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 14:19:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-09 14:19:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-09 14:19:30 --> Exception: The table name does not exist. Please check you database and try again.
+[Method: GET, Route: rab/datarab]
+in APPPATH\Libraries\GroceryCrud.php on line 4735.
+ 1 APPPATH\Libraries\GroceryCrud.php(4230): App\Libraries\GroceryCrud->get_table()
+ 2 APPPATH\Libraries\GroceryCrud.php(4247): App\Libraries\GroceryCrud->pre_render()
+ 3 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+ERROR - 2025-07-09 14:20:56 --> Error connecting to the database: CodeIgniter\Database\Exceptions\DatabaseException: SQLite3 error: Unable to open database: unable to open database file in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:118
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\SQLite3\Connection->connect(false)
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SELECT "NAME" F...')
+#4 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(50): CodeIgniter\Database\BaseConnection->tableExists('t_rab')
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(597): App\Models\GroceryCrudModel->db_table_exists('t_rab')
+#7 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4734): App\Libraries\grocery_CRUD_Model_Driver->table_exists('t_rab')
+#8 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4230): App\Libraries\GroceryCrud->get_table()
+#9 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4247): App\Libraries\GroceryCrud->pre_render()
+#10 C:\xampp\htdocs\ci4\spj\app\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+#13 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#16 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#17 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#18 {main}
+CRITICAL - 2025-07-09 14:20:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLite3]: SQLite3 error: Unable to open database: unable to open database file
+[Method: GET, Route: rab/datarab]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH\Database\BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SELECT "NAME" FROM "SQLITE_MASTER" WHERE "TYPE" = \'table\' AND "NAME" NOT LIKE \'sqlite!_%\' ESCAPE \'!\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+ 5 APPPATH\Models\GroceryCrudModel.php(50): CodeIgniter\Database\BaseConnection->tableExists('t_rab')
+ 6 APPPATH\Libraries\GroceryCrud.php(597): App\Models\GroceryCrudModel->db_table_exists('t_rab')
+ 7 APPPATH\Libraries\GroceryCrud.php(4734): App\Libraries\grocery_CRUD_Model_Driver->table_exists('t_rab')
+ 8 APPPATH\Libraries\GroceryCrud.php(4230): App\Libraries\GroceryCrud->get_table()
+ 9 APPPATH\Libraries\GroceryCrud.php(4247): App\Libraries\GroceryCrud->pre_render()
+10 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:21:24 --> Exception: The table name does not exist. Please check you database and try again.
+[Method: GET, Route: rab/datarab]
+in APPPATH\Libraries\GroceryCrud.php on line 4735.
+ 1 APPPATH\Libraries\GroceryCrud.php(4230): App\Libraries\GroceryCrud->get_table()
+ 2 APPPATH\Libraries\GroceryCrud.php(4247): App\Libraries\GroceryCrud->pre_render()
+ 3 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+ERROR - 2025-07-09 14:22:51 --> Exception: Unable to prepare statement: 1, near "SHOW": syntax error in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:176
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(176): SQLite3->query('SHOW COLUMNS FR...')
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FR...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FR...')
+#3 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(431): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FR...')
+#4 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-09 14:22:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "SHOW": syntax error
+[Method: GET, Route: rab/datarab]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Models\GroceryCrudModel.php(431): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_rab`')
+ 2 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 3 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 4 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 5 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:22:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "SHOW": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 181.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FROM `t_rab`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FROM `t_rab`')
+ 3 APPPATH\Models\GroceryCrudModel.php(431): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_rab`')
+ 4 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 5 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 6 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 7 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:22:51 --> [Caused by] Exception: Unable to prepare statement: 1, near "SHOW": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 176.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(176): SQLite3->query('SHOW COLUMNS FROM `t_rab`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FROM `t_rab`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FROM `t_rab`')
+ 4 APPPATH\Models\GroceryCrudModel.php(431): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_rab`')
+ 5 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 6 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 7 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 8 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+ERROR - 2025-07-09 14:30:58 --> Exception: Unable to prepare statement: 1, near "SHOW": syntax error in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:176
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(176): SQLite3->query('SHOW COLUMNS FR...')
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FR...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FR...')
+#3 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(431): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FR...')
+#4 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-09 14:30:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "SHOW": syntax error
+[Method: GET, Route: rab/datarab]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Models\GroceryCrudModel.php(431): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_rab`')
+ 2 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 3 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 4 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 5 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:30:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "SHOW": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 181.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FROM `t_rab`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FROM `t_rab`')
+ 3 APPPATH\Models\GroceryCrudModel.php(431): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_rab`')
+ 4 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 5 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 6 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 7 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:30:58 --> [Caused by] Exception: Unable to prepare statement: 1, near "SHOW": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 176.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(176): SQLite3->query('SHOW COLUMNS FROM `t_rab`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FROM `t_rab`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FROM `t_rab`')
+ 4 APPPATH\Models\GroceryCrudModel.php(431): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_rab`')
+ 5 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 6 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 7 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 8 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+ERROR - 2025-07-09 14:31:04 --> Exception: Unable to prepare statement: 1, near "SHOW": syntax error in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:176
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(176): SQLite3->query('SHOW COLUMNS FR...')
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FR...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FR...')
+#3 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(431): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FR...')
+#4 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Setting.php(71): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Setting->pejabat()
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-09 14:31:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "SHOW": syntax error
+[Method: GET, Route: setting/pejabat]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Models\GroceryCrudModel.php(431): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_pejabat`')
+ 2 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 3 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 4 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 5 APPPATH\Controllers\Setting.php(71): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setting->pejabat()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:31:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "SHOW": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 181.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FROM `t_pejabat`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FROM `t_pejabat`')
+ 3 APPPATH\Models\GroceryCrudModel.php(431): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_pejabat`')
+ 4 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 5 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 6 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 7 APPPATH\Controllers\Setting.php(71): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setting->pejabat()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:31:04 --> [Caused by] Exception: Unable to prepare statement: 1, near "SHOW": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 176.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(176): SQLite3->query('SHOW COLUMNS FROM `t_pejabat`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FROM `t_pejabat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FROM `t_pejabat`')
+ 4 APPPATH\Models\GroceryCrudModel.php(431): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_pejabat`')
+ 5 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 6 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 7 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 8 APPPATH\Controllers\Setting.php(71): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setting->pejabat()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+ERROR - 2025-07-09 14:31:22 --> Exception: Unable to prepare statement: 1, no such table: t_kecamatan in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:176
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(176): SQLite3->query('SELECT *\nFROM `...')
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\spj\app\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Login->index()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-07-09 14:31:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: t_kecamatan
+[Method: GET, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:31:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: t_kecamatan
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 181.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `t_kecamatan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `t_kecamatan`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:31:22 --> [Caused by] Exception: Unable to prepare statement: 1, no such table: t_kecamatan
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 176.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(176): SQLite3->query('SELECT *
+FROM `t_kecamatan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `t_kecamatan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `t_kecamatan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+ERROR - 2025-07-09 14:31:37 --> Exception: Unable to prepare statement: 1, no such table: t_kecamatan in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:176
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(176): SQLite3->query('SELECT *\nFROM `...')
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\spj\app\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Login->index()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-07-09 14:31:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: t_kecamatan
+[Method: GET, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:31:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: t_kecamatan
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 181.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `t_kecamatan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `t_kecamatan`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:31:37 --> [Caused by] Exception: Unable to prepare statement: 1, no such table: t_kecamatan
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 176.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(176): SQLite3->query('SELECT *
+FROM `t_kecamatan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `t_kecamatan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `t_kecamatan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+ERROR - 2025-07-09 14:32:06 --> Exception: Unable to prepare statement: 1, near "SHOW": syntax error in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:176
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(176): SQLite3->query('SHOW COLUMNS FR...')
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FR...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FR...')
+#3 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(431): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FR...')
+#4 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-09 14:32:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "SHOW": syntax error
+[Method: GET, Route: rab/datarab]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Models\GroceryCrudModel.php(431): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_rab`')
+ 2 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 3 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 4 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 5 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:32:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "SHOW": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 181.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FROM `t_rab`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FROM `t_rab`')
+ 3 APPPATH\Models\GroceryCrudModel.php(431): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_rab`')
+ 4 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 5 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 6 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 7 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:32:06 --> [Caused by] Exception: Unable to prepare statement: 1, near "SHOW": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 176.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(176): SQLite3->query('SHOW COLUMNS FROM `t_rab`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('SHOW COLUMNS FROM `t_rab`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW COLUMNS FROM `t_rab`')
+ 4 APPPATH\Models\GroceryCrudModel.php(431): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FROM `t_rab`')
+ 5 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 6 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 7 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 8 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+ERROR - 2025-07-09 14:35:15 --> Exception: Unable to prepare statement: 1, near "COLUMNS": syntax error in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:176
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(176): SQLite3->query('PRAGMA database...')
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('PRAGMA database...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('PRAGMA database...')
+#3 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(432): CodeIgniter\Database\BaseConnection->query('PRAGMA database...')
+#4 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-09 14:35:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "COLUMNS": syntax error
+[Method: GET, Route: rab/datarab]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Models\GroceryCrudModel.php(432): CodeIgniter\Database\BaseConnection->query('PRAGMA database_list COLUMNS FROM `t_rab`')
+ 2 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 3 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 4 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 5 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:35:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "COLUMNS": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 181.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('PRAGMA database_list COLUMNS FROM `t_rab`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('PRAGMA database_list COLUMNS FROM `t_rab`')
+ 3 APPPATH\Models\GroceryCrudModel.php(432): CodeIgniter\Database\BaseConnection->query('PRAGMA database_list COLUMNS FROM `t_rab`')
+ 4 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 5 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 6 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 7 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:35:15 --> [Caused by] Exception: Unable to prepare statement: 1, near "COLUMNS": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 176.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(176): SQLite3->query('PRAGMA database_list COLUMNS FROM `t_rab`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('PRAGMA database_list COLUMNS FROM `t_rab`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('PRAGMA database_list COLUMNS FROM `t_rab`')
+ 4 APPPATH\Models\GroceryCrudModel.php(432): CodeIgniter\Database\BaseConnection->query('PRAGMA database_list COLUMNS FROM `t_rab`')
+ 5 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 6 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 7 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 8 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+ERROR - 2025-07-09 14:35:23 --> Exception: Unable to prepare statement: 1, near "FROM": syntax error in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:176
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(176): SQLite3->query('PRAGMA database...')
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('PRAGMA database...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('PRAGMA database...')
+#3 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(432): CodeIgniter\Database\BaseConnection->query('PRAGMA database...')
+#4 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-09 14:35:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "FROM": syntax error
+[Method: GET, Route: rab/datarab]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Models\GroceryCrudModel.php(432): CodeIgniter\Database\BaseConnection->query('PRAGMA database_list  FROM `t_rab`')
+ 2 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 3 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 4 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 5 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:35:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "FROM": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 181.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('PRAGMA database_list  FROM `t_rab`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('PRAGMA database_list  FROM `t_rab`')
+ 3 APPPATH\Models\GroceryCrudModel.php(432): CodeIgniter\Database\BaseConnection->query('PRAGMA database_list  FROM `t_rab`')
+ 4 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 5 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 6 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 7 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:35:23 --> [Caused by] Exception: Unable to prepare statement: 1, near "FROM": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 176.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(176): SQLite3->query('PRAGMA database_list  FROM `t_rab`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('PRAGMA database_list  FROM `t_rab`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('PRAGMA database_list  FROM `t_rab`')
+ 4 APPPATH\Models\GroceryCrudModel.php(432): CodeIgniter\Database\BaseConnection->query('PRAGMA database_list  FROM `t_rab`')
+ 5 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 6 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 7 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 8 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+ERROR - 2025-07-09 14:36:07 --> Exception: Unable to prepare statement: 1, near "FROM": syntax error in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:176
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(176): SQLite3->query('PRAGMA COLUMNS ...')
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('PRAGMA COLUMNS ...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('PRAGMA COLUMNS ...')
+#3 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(432): CodeIgniter\Database\BaseConnection->query('PRAGMA COLUMNS ...')
+#4 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-09 14:36:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "FROM": syntax error
+[Method: GET, Route: rab/datarab]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Models\GroceryCrudModel.php(432): CodeIgniter\Database\BaseConnection->query('PRAGMA COLUMNS FROM `t_rab`')
+ 2 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 3 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 4 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 5 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:36:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "FROM": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 181.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('PRAGMA COLUMNS FROM `t_rab`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('PRAGMA COLUMNS FROM `t_rab`')
+ 3 APPPATH\Models\GroceryCrudModel.php(432): CodeIgniter\Database\BaseConnection->query('PRAGMA COLUMNS FROM `t_rab`')
+ 4 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 5 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 6 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 7 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:36:07 --> [Caused by] Exception: Unable to prepare statement: 1, near "FROM": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 176.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(176): SQLite3->query('PRAGMA COLUMNS FROM `t_rab`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('PRAGMA COLUMNS FROM `t_rab`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('PRAGMA COLUMNS FROM `t_rab`')
+ 4 APPPATH\Models\GroceryCrudModel.php(432): CodeIgniter\Database\BaseConnection->query('PRAGMA COLUMNS FROM `t_rab`')
+ 5 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 6 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 7 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 8 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+ERROR - 2025-07-09 14:36:10 --> Exception: Unable to prepare statement: 1, near "FROM": syntax error in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php:176
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\SQLite3\Connection.php(176): SQLite3->query('PRAGMA COLUMNS ...')
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('PRAGMA COLUMNS ...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('PRAGMA COLUMNS ...')
+#3 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(432): CodeIgniter\Database\BaseConnection->query('PRAGMA COLUMNS ...')
+#4 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-09 14:36:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "FROM": syntax error
+[Method: GET, Route: rab/datarab]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Models\GroceryCrudModel.php(432): CodeIgniter\Database\BaseConnection->query('PRAGMA COLUMNS FROM `t_rab`')
+ 2 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 3 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 4 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 5 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:36:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, near "FROM": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 181.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('PRAGMA COLUMNS FROM `t_rab`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('PRAGMA COLUMNS FROM `t_rab`')
+ 3 APPPATH\Models\GroceryCrudModel.php(432): CodeIgniter\Database\BaseConnection->query('PRAGMA COLUMNS FROM `t_rab`')
+ 4 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 5 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 6 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 7 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-09 14:36:10 --> [Caused by] Exception: Unable to prepare statement: 1, near "FROM": syntax error
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 176.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(176): SQLite3->query('PRAGMA COLUMNS FROM `t_rab`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\SQLite3\Connection->execute('PRAGMA COLUMNS FROM `t_rab`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('PRAGMA COLUMNS FROM `t_rab`')
+ 4 APPPATH\Models\GroceryCrudModel.php(432): CodeIgniter\Database\BaseConnection->query('PRAGMA COLUMNS FROM `t_rab`')
+ 5 APPPATH\Libraries\GroceryCrud.php(55): App\Models\GroceryCrudModel->get_field_types_basic_table()
+ 6 APPPATH\Libraries\GroceryCrud.php(1343): App\Libraries\grocery_CRUD_Field_Types->get_field_types()
+ 7 APPPATH\Libraries\GroceryCrud.php(4272): App\Libraries\grocery_CRUD_Layout->showList(false, Object(stdClass))
+ 8 APPPATH\Controllers\Rab.php(86): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')

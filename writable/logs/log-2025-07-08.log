@@ -1,0 +1,184 @@
+CRITICAL - 2025-07-08 02:44:28 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 02:44:40 --> Exception: On the state "insert" you must have post data
+[Method: GET, Route: rab/uploadrab/insert]
+in APPPATH\Libraries\GroceryCrud.php on line 2804.
+ 1 APPPATH\Libraries\GroceryCrud.php(4250): App\Libraries\grocery_CRUD_States->getStateInfo()
+ 2 APPPATH\Controllers\Rab.php(199): App\Libraries\GroceryCrud->render()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-08 02:45:15 --> Exception: On the state "insert" you must have post data
+[Method: GET, Route: rab/uploadrab/insert]
+in APPPATH\Libraries\GroceryCrud.php on line 2804.
+ 1 APPPATH\Libraries\GroceryCrud.php(4250): App\Libraries\grocery_CRUD_States->getStateInfo()
+ 2 APPPATH\Controllers\Rab.php(199): App\Libraries\GroceryCrud->render()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-08 02:45:25 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 02:47:05 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 02:48:36 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 02:50:52 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 02:54:33 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 02:56:51 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 02:57:13 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 02:58:47 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 03:01:05 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 03:02:01 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 03:11:19 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 03:11:30 --> Exception: On the state "insert" you must have post data
+[Method: GET, Route: rab/uploadrab/insert]
+in APPPATH\Libraries\GroceryCrud.php on line 2804.
+ 1 APPPATH\Libraries\GroceryCrud.php(4250): App\Libraries\grocery_CRUD_States->getStateInfo()
+ 2 APPPATH\Controllers\Rab.php(214): App\Libraries\GroceryCrud->render()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-08 03:11:40 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 03:14:06 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 03:21:07 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 03:22:59 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 03:25:02 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 03:31:11 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 03:31:59 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 03:34:54 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 03:35:50 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-08 03:41:18 --> ParseError: syntax error, unexpected token "/"
+[Method: GET, Route: rab/uploadrab/add]
+in APPPATH\Controllers\Rab.php on line 156.
+ 1 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouter->getRoute('rab/uploadrab/add', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('rab/uploadrab/add')
+ 3 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('rab/uploadrab/add')
+ 4 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-08 03:41:33 --> ParseError: syntax error, unexpected token "/"
+[Method: GET, Route: rab/uploadrab]
+in APPPATH\Controllers\Rab.php on line 156.
+ 1 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouter->getRoute('rab/uploadrab', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('rab/uploadrab')
+ 3 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('rab/uploadrab')
+ 4 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-08 03:41:58 --> ParseError: syntax error, unexpected token "/"
+[Method: GET, Route: rab/uploadrab/add]
+in APPPATH\Controllers\Rab.php on line 156.
+ 1 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouter->getRoute('rab/uploadrab/add', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('rab/uploadrab/add')
+ 3 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('rab/uploadrab/add')
+ 4 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+DEBUG - 2025-07-08 03:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 03:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 03:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-08 03:42:27 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-07-08 03:44:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 03:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 03:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-08 03:44:33 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-07-08 03:46:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 03:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 03:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-08 03:46:50 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-07-08 03:48:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 03:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-08 03:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-08 03:49:00 --> ErrorException: Array and string offset access syntax with curly braces is no longer supported
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\ThirdParty\PHPExcel\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

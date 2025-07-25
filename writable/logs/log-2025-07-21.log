@@ -1,0 +1,370 @@
+ERROR - 2025-07-21 09:20:35 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_app', 3306, '', 0)
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\spj\app\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Login->index()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\ci4\spj\app\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Login->index()
+#7 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-21 09:20:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+ERROR - 2025-07-21 09:59:01 --> mysqli_sql_exception: Unknown column 'Kabupaten/Kota' in 'field list' in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `t_kecam...', 0)
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `t_kecam...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `t_kecam...')
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `t_kecam...', Array, false)
+#4 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(470): CodeIgniter\Database\BaseBuilder->update(Array, Array)
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(990): App\Models\GroceryCrudModel->db_update(Array, '1')
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4373): App\Libraries\grocery_CRUD_Model_Driver->db_update(Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Setting.php(221): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Setting->kecamatan('update', '1')
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-21 09:59:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Kabupaten/Kota' in 'field list'
+[Method: POST, Route: setting/kecamatan/update/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `t_kecamatan` SET `Kabupaten/Kota` = :Kabupaten/Kota:, `nama_kecamatan` = :nama_kecamatan:, `alamat_kecamatan` = :alamat_kecamatan:, `telp_kecamatan` = :telp_kecamatan:, `updated_at` = :updated_at:
+WHERE `id_kecamatan` = :id_kecamatan:', [...], false)
+ 2 APPPATH\Models\GroceryCrudModel.php(470): CodeIgniter\Database\BaseBuilder->update([...], [...])
+ 3 APPPATH\Libraries\GroceryCrud.php(990): App\Models\GroceryCrudModel->db_update([...], '1')
+ 4 APPPATH\Libraries\GroceryCrud.php(4373): App\Libraries\grocery_CRUD_Model_Driver->db_update(Object(stdClass))
+ 5 APPPATH\Controllers\Setting.php(221): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setting->kecamatan('update', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-21 09:59:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Kabupaten/Kota' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `t_kecamatan` SET `Kabupaten/Kota` = \'Lamongan\', `nama_kecamatan` = \'Babat\', `alamat_kecamatan` = \'\\r\\n	Jalan Pramuka\\r\\n\', `telp_kecamatan` = \'\', `updated_at` = \'2025-07-21 09:58:51\'
+WHERE `id_kecamatan` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `t_kecamatan` SET `Kabupaten/Kota` = \'Lamongan\', `nama_kecamatan` = \'Babat\', `alamat_kecamatan` = \'\\r\\n	Jalan Pramuka\\r\\n\', `telp_kecamatan` = \'\', `updated_at` = \'2025-07-21 09:58:51\'
+WHERE `id_kecamatan` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `t_kecamatan` SET `Kabupaten/Kota` = :Kabupaten/Kota:, `nama_kecamatan` = :nama_kecamatan:, `alamat_kecamatan` = :alamat_kecamatan:, `telp_kecamatan` = :telp_kecamatan:, `updated_at` = :updated_at:
+WHERE `id_kecamatan` = :id_kecamatan:', [...], false)
+ 4 APPPATH\Models\GroceryCrudModel.php(470): CodeIgniter\Database\BaseBuilder->update([...], [...])
+ 5 APPPATH\Libraries\GroceryCrud.php(990): App\Models\GroceryCrudModel->db_update([...], '1')
+ 6 APPPATH\Libraries\GroceryCrud.php(4373): App\Libraries\grocery_CRUD_Model_Driver->db_update(Object(stdClass))
+ 7 APPPATH\Controllers\Setting.php(221): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setting->kecamatan('update', '1')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-21 09:59:01 --> [Caused by] mysqli_sql_exception: Unknown column 'Kabupaten/Kota' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `t_kecamatan` SET `Kabupaten/Kota` = \'Lamongan\', `nama_kecamatan` = \'Babat\', `alamat_kecamatan` = \'\\r\\n	Jalan Pramuka\\r\\n\', `telp_kecamatan` = \'\', `updated_at` = \'2025-07-21 09:58:51\'
+WHERE `id_kecamatan` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `t_kecamatan` SET `Kabupaten/Kota` = \'Lamongan\', `nama_kecamatan` = \'Babat\', `alamat_kecamatan` = \'\\r\\n	Jalan Pramuka\\r\\n\', `telp_kecamatan` = \'\', `updated_at` = \'2025-07-21 09:58:51\'
+WHERE `id_kecamatan` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `t_kecamatan` SET `Kabupaten/Kota` = \'Lamongan\', `nama_kecamatan` = \'Babat\', `alamat_kecamatan` = \'\\r\\n	Jalan Pramuka\\r\\n\', `telp_kecamatan` = \'\', `updated_at` = \'2025-07-21 09:58:51\'
+WHERE `id_kecamatan` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `t_kecamatan` SET `Kabupaten/Kota` = :Kabupaten/Kota:, `nama_kecamatan` = :nama_kecamatan:, `alamat_kecamatan` = :alamat_kecamatan:, `telp_kecamatan` = :telp_kecamatan:, `updated_at` = :updated_at:
+WHERE `id_kecamatan` = :id_kecamatan:', [...], false)
+ 5 APPPATH\Models\GroceryCrudModel.php(470): CodeIgniter\Database\BaseBuilder->update([...], [...])
+ 6 APPPATH\Libraries\GroceryCrud.php(990): App\Models\GroceryCrudModel->db_update([...], '1')
+ 7 APPPATH\Libraries\GroceryCrud.php(4373): App\Libraries\grocery_CRUD_Model_Driver->db_update(Object(stdClass))
+ 8 APPPATH\Controllers\Setting.php(221): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setting->kecamatan('update', '1')
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-21 09:59:11 --> Exception: On the state "update" you must have post data
+[Method: GET, Route: setting/kecamatan/update/1]
+in APPPATH\Libraries\GroceryCrud.php on line 2845.
+ 1 APPPATH\Libraries\GroceryCrud.php(4282): App\Libraries\grocery_CRUD_States->getStateInfo()
+ 2 APPPATH\Controllers\Setting.php(221): App\Libraries\GroceryCrud->render()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setting->kecamatan('update', '1')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+ERROR - 2025-07-21 09:59:59 --> mysqli_sql_exception: Unknown column 'Kabupaten/Kota' in 'field list' in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `t_kecam...', 0)
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `t_kecam...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `t_kecam...')
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `t_kecam...', Array, false)
+#4 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(470): CodeIgniter\Database\BaseBuilder->update(Array, Array)
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(990): App\Models\GroceryCrudModel->db_update(Array, '1')
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4373): App\Libraries\grocery_CRUD_Model_Driver->db_update(Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Setting.php(221): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Setting->kecamatan('update', '1')
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-21 09:59:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Kabupaten/Kota' in 'field list'
+[Method: POST, Route: setting/kecamatan/update/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `t_kecamatan` SET `nama_kecamatan` = :nama_kecamatan:, `Kabupaten/Kota` = :Kabupaten/Kota:, `alamat_kecamatan` = :alamat_kecamatan:, `telp_kecamatan` = :telp_kecamatan:, `updated_at` = :updated_at:
+WHERE `id_kecamatan` = :id_kecamatan:', [...], false)
+ 2 APPPATH\Models\GroceryCrudModel.php(470): CodeIgniter\Database\BaseBuilder->update([...], [...])
+ 3 APPPATH\Libraries\GroceryCrud.php(990): App\Models\GroceryCrudModel->db_update([...], '1')
+ 4 APPPATH\Libraries\GroceryCrud.php(4373): App\Libraries\grocery_CRUD_Model_Driver->db_update(Object(stdClass))
+ 5 APPPATH\Controllers\Setting.php(221): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setting->kecamatan('update', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-21 09:59:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Kabupaten/Kota' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `t_kecamatan` SET `nama_kecamatan` = \'Babat\', `Kabupaten/Kota` = \'Lamongan\', `alamat_kecamatan` = \'\\r\\n	Jalan Pramuka\\r\\n\', `telp_kecamatan` = \'\', `updated_at` = \'2025-07-21 09:59:48\'
+WHERE `id_kecamatan` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `t_kecamatan` SET `nama_kecamatan` = \'Babat\', `Kabupaten/Kota` = \'Lamongan\', `alamat_kecamatan` = \'\\r\\n	Jalan Pramuka\\r\\n\', `telp_kecamatan` = \'\', `updated_at` = \'2025-07-21 09:59:48\'
+WHERE `id_kecamatan` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `t_kecamatan` SET `nama_kecamatan` = :nama_kecamatan:, `Kabupaten/Kota` = :Kabupaten/Kota:, `alamat_kecamatan` = :alamat_kecamatan:, `telp_kecamatan` = :telp_kecamatan:, `updated_at` = :updated_at:
+WHERE `id_kecamatan` = :id_kecamatan:', [...], false)
+ 4 APPPATH\Models\GroceryCrudModel.php(470): CodeIgniter\Database\BaseBuilder->update([...], [...])
+ 5 APPPATH\Libraries\GroceryCrud.php(990): App\Models\GroceryCrudModel->db_update([...], '1')
+ 6 APPPATH\Libraries\GroceryCrud.php(4373): App\Libraries\grocery_CRUD_Model_Driver->db_update(Object(stdClass))
+ 7 APPPATH\Controllers\Setting.php(221): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setting->kecamatan('update', '1')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-21 09:59:59 --> [Caused by] mysqli_sql_exception: Unknown column 'Kabupaten/Kota' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `t_kecamatan` SET `nama_kecamatan` = \'Babat\', `Kabupaten/Kota` = \'Lamongan\', `alamat_kecamatan` = \'\\r\\n	Jalan Pramuka\\r\\n\', `telp_kecamatan` = \'\', `updated_at` = \'2025-07-21 09:59:48\'
+WHERE `id_kecamatan` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `t_kecamatan` SET `nama_kecamatan` = \'Babat\', `Kabupaten/Kota` = \'Lamongan\', `alamat_kecamatan` = \'\\r\\n	Jalan Pramuka\\r\\n\', `telp_kecamatan` = \'\', `updated_at` = \'2025-07-21 09:59:48\'
+WHERE `id_kecamatan` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `t_kecamatan` SET `nama_kecamatan` = \'Babat\', `Kabupaten/Kota` = \'Lamongan\', `alamat_kecamatan` = \'\\r\\n	Jalan Pramuka\\r\\n\', `telp_kecamatan` = \'\', `updated_at` = \'2025-07-21 09:59:48\'
+WHERE `id_kecamatan` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `t_kecamatan` SET `nama_kecamatan` = :nama_kecamatan:, `Kabupaten/Kota` = :Kabupaten/Kota:, `alamat_kecamatan` = :alamat_kecamatan:, `telp_kecamatan` = :telp_kecamatan:, `updated_at` = :updated_at:
+WHERE `id_kecamatan` = :id_kecamatan:', [...], false)
+ 5 APPPATH\Models\GroceryCrudModel.php(470): CodeIgniter\Database\BaseBuilder->update([...], [...])
+ 6 APPPATH\Libraries\GroceryCrud.php(990): App\Models\GroceryCrudModel->db_update([...], '1')
+ 7 APPPATH\Libraries\GroceryCrud.php(4373): App\Libraries\grocery_CRUD_Model_Driver->db_update(Object(stdClass))
+ 8 APPPATH\Controllers\Setting.php(221): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setting->kecamatan('update', '1')
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setting))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-21 10:07:04 --> ParseError: syntax error, unexpected variable "$crud"
+[Method: GET, Route: rab/datarab]
+in APPPATH\Controllers\Rab.php on line 86.
+ 1 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouter->getRoute('rab/datarab', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('rab/datarab')
+ 3 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('rab/datarab')
+ 4 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-21 10:08:45 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: rab/bagirab]
+in APPPATH\Controllers\Rab.php on line 155.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->bagirab()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-21 10:10:25 --> ErrorException: Maximum execution time of 60 seconds exceeded
+[Method: POST, Route: rab/bagirab]
+in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Worksheet\Validations.php on line 27.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-21 10:23:17 --> ErrorException: Undefined array key "kab_kecamatan"
+[Method: POST, Route: login/auth]
+in APPPATH\Controllers\Login.php on line 59.
+ 1 APPPATH\Controllers\Login.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kab_kecamatan"', 'C:\\xampp\\htdocs\\ci4\\spj\\app\\Controllers\\Login.php', 59)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->auth()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-21 10:58:57 --> ErrorException: Undefined variable $output
+[Method: GET, Route: rab/datarab/add]
+in APPPATH\Controllers\Rab.php on line 103.
+ 1 APPPATH\Controllers\Rab.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $output', 'C:\\xampp\\htdocs\\ci4\\spj\\app\\Controllers\\Rab.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->datarab('add')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-21 11:18:05 --> ErrorException: Undefined array key "id_kecamatan"
+[Method: POST, Route: login/auth]
+in APPPATH\Controllers\Login.php on line 47.
+ 1 APPPATH\Controllers\Login.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_kecamatan"', 'C:\\xampp\\htdocs\\ci4\\spj\\app\\Controllers\\Login.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->auth()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-21 11:26:58 --> ErrorException: Undefined array key "id_kecamatan"
+[Method: POST, Route: login/auth]
+in APPPATH\Controllers\Login.php on line 47.
+ 1 APPPATH\Controllers\Login.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_kecamatan"', 'C:\\xampp\\htdocs\\ci4\\spj\\app\\Controllers\\Login.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->auth()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-21 11:29:17 --> ErrorException: Undefined array key "id_kecamatan"
+[Method: POST, Route: login/auth]
+in APPPATH\Controllers\Login.php on line 47.
+ 1 APPPATH\Controllers\Login.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_kecamatan"', 'C:\\xampp\\htdocs\\ci4\\spj\\app\\Controllers\\Login.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->auth()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+ERROR - 2025-07-21 11:44:28 --> mysqli_sql_exception: Column 'id_kecamatan' cannot be null in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `t_...', 0)
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `t_...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `t_...')
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_...', Array, false)
+#4 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert(Array)
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4361): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Kuitansi.php(106): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Kuitansi->data('insert')
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kuitansi))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-21 11:44:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_kecamatan' cannot be null
+[Method: POST, Route: kuitansi/data/insert]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_kuitansi` (`nomor`, `tahun_anggaran`, `nama_toko`, `nama_penerima`, `akun`, `id_kecamatan`, `keterangan`, `bruto`, `ppn`, `pph`, `netto`, `tanggal`, `created_at`, `updated_at`) VALUES (:nomor:, :tahun_anggaran:, :nama_toko:, :nama_penerima:, :akun:, :id_kecamatan:, :keterangan:, :bruto:, :ppn:, :pph:, :netto:, :tanggal:, :created_at:, :updated_at:)', [...], false)
+ 2 APPPATH\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert([...])
+ 4 APPPATH\Libraries\GroceryCrud.php(4361): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 5 APPPATH\Controllers\Kuitansi.php(106): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kuitansi->data('insert')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kuitansi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-21 11:44:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_kecamatan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `t_kuitansi` (`nomor`, `tahun_anggaran`, `nama_toko`, `nama_penerima`, `akun`, `id_kecamatan`, `keterangan`, `bruto`, `ppn`, `pph`, `netto`, `tanggal`, `created_at`, `updated_at`) VALUES (\'000001/KU.00.04/JI-11/07/2025\', \'2025\', \'juj\', \'juj\', \'1\', NULL, \'dede\', \'100000\', \'\', \'\', 100000, \'2025-07-20\', \'2025-07-21 11:44:08\', \'2025-07-21 11:44:08\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `t_kuitansi` (`nomor`, `tahun_anggaran`, `nama_toko`, `nama_penerima`, `akun`, `id_kecamatan`, `keterangan`, `bruto`, `ppn`, `pph`, `netto`, `tanggal`, `created_at`, `updated_at`) VALUES (\'000001/KU.00.04/JI-11/07/2025\', \'2025\', \'juj\', \'juj\', \'1\', NULL, \'dede\', \'100000\', \'\', \'\', 100000, \'2025-07-20\', \'2025-07-21 11:44:08\', \'2025-07-21 11:44:08\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_kuitansi` (`nomor`, `tahun_anggaran`, `nama_toko`, `nama_penerima`, `akun`, `id_kecamatan`, `keterangan`, `bruto`, `ppn`, `pph`, `netto`, `tanggal`, `created_at`, `updated_at`) VALUES (:nomor:, :tahun_anggaran:, :nama_toko:, :nama_penerima:, :akun:, :id_kecamatan:, :keterangan:, :bruto:, :ppn:, :pph:, :netto:, :tanggal:, :created_at:, :updated_at:)', [...], false)
+ 4 APPPATH\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert([...])
+ 6 APPPATH\Libraries\GroceryCrud.php(4361): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 7 APPPATH\Controllers\Kuitansi.php(106): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kuitansi->data('insert')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kuitansi))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-21 11:44:28 --> [Caused by] mysqli_sql_exception: Column 'id_kecamatan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `t_kuitansi` (`nomor`, `tahun_anggaran`, `nama_toko`, `nama_penerima`, `akun`, `id_kecamatan`, `keterangan`, `bruto`, `ppn`, `pph`, `netto`, `tanggal`, `created_at`, `updated_at`) VALUES (\'000001/KU.00.04/JI-11/07/2025\', \'2025\', \'juj\', \'juj\', \'1\', NULL, \'dede\', \'100000\', \'\', \'\', 100000, \'2025-07-20\', \'2025-07-21 11:44:08\', \'2025-07-21 11:44:08\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `t_kuitansi` (`nomor`, `tahun_anggaran`, `nama_toko`, `nama_penerima`, `akun`, `id_kecamatan`, `keterangan`, `bruto`, `ppn`, `pph`, `netto`, `tanggal`, `created_at`, `updated_at`) VALUES (\'000001/KU.00.04/JI-11/07/2025\', \'2025\', \'juj\', \'juj\', \'1\', NULL, \'dede\', \'100000\', \'\', \'\', 100000, \'2025-07-20\', \'2025-07-21 11:44:08\', \'2025-07-21 11:44:08\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `t_kuitansi` (`nomor`, `tahun_anggaran`, `nama_toko`, `nama_penerima`, `akun`, `id_kecamatan`, `keterangan`, `bruto`, `ppn`, `pph`, `netto`, `tanggal`, `created_at`, `updated_at`) VALUES (\'000001/KU.00.04/JI-11/07/2025\', \'2025\', \'juj\', \'juj\', \'1\', NULL, \'dede\', \'100000\', \'\', \'\', 100000, \'2025-07-20\', \'2025-07-21 11:44:08\', \'2025-07-21 11:44:08\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_kuitansi` (`nomor`, `tahun_anggaran`, `nama_toko`, `nama_penerima`, `akun`, `id_kecamatan`, `keterangan`, `bruto`, `ppn`, `pph`, `netto`, `tanggal`, `created_at`, `updated_at`) VALUES (:nomor:, :tahun_anggaran:, :nama_toko:, :nama_penerima:, :akun:, :id_kecamatan:, :keterangan:, :bruto:, :ppn:, :pph:, :netto:, :tanggal:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert([...])
+ 7 APPPATH\Libraries\GroceryCrud.php(4361): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 8 APPPATH\Controllers\Kuitansi.php(106): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kuitansi->data('insert')
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kuitansi))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-21 11:44:37 --> Exception: On the state "insert" you must have post data
+[Method: GET, Route: kuitansi/data/insert]
+in APPPATH\Libraries\GroceryCrud.php on line 2836.
+ 1 APPPATH\Libraries\GroceryCrud.php(4282): App\Libraries\grocery_CRUD_States->getStateInfo()
+ 2 APPPATH\Controllers\Kuitansi.php(106): App\Libraries\GroceryCrud->render()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kuitansi->data('insert')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kuitansi))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')

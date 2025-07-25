@@ -1,0 +1,985 @@
+ERROR - 2025-07-11 09:43:53 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_app', 3306, '', 0)
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci4\spj\app\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Login->index()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\ci4\spj\app\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Login->index()
+#7 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-11 09:43:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_kecamatan`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Login.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 09:59:02 --> Error: Class "PHPExcel_IOFactory" not found
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\Controllers\Rab.php on line 189.
+ 1 [internal function]: App\Controllers\Rab->upload_excel(Object(stdClass))
+ 2 APPPATH\Libraries\GroceryCrud.php(843): call_user_func([...], Object(stdClass))
+ 3 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 4 APPPATH\Controllers\Rab.php(173): App\Libraries\GroceryCrud->render()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 09:59:13 --> Exception: On the state "insert" you must have post data
+[Method: GET, Route: rab/uploadrab/insert]
+in APPPATH\Libraries\GroceryCrud.php on line 2804.
+ 1 APPPATH\Libraries\GroceryCrud.php(4250): App\Libraries\grocery_CRUD_States->getStateInfo()
+ 2 APPPATH\Controllers\Rab.php(173): App\Libraries\GroceryCrud->render()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 10:00:47 --> Error: Class "PHPExcel_IOFactory" not found
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\Controllers\Rab.php on line 189.
+ 1 [internal function]: App\Controllers\Rab->upload_excel(Object(stdClass))
+ 2 APPPATH\Libraries\GroceryCrud.php(843): call_user_func([...], Object(stdClass))
+ 3 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 4 APPPATH\Controllers\Rab.php(173): App\Libraries\GroceryCrud->render()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 10:02:57 --> Error: Class "PHPExcel_IOFactory" not found
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\Controllers\Rab.php on line 189.
+ 1 [internal function]: App\Controllers\Rab->upload_excel(Object(stdClass))
+ 2 APPPATH\Libraries\GroceryCrud.php(843): call_user_func([...], Object(stdClass))
+ 3 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 4 APPPATH\Controllers\Rab.php(173): App\Libraries\GroceryCrud->render()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 10:03:11 --> Error: Class "PHPExcel_IOFactory" not found
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\Controllers\Rab.php on line 189.
+ 1 [internal function]: App\Controllers\Rab->upload_excel(Object(stdClass))
+ 2 APPPATH\Libraries\GroceryCrud.php(843): call_user_func([...], Object(stdClass))
+ 3 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 4 APPPATH\Controllers\Rab.php(173): App\Libraries\GroceryCrud->render()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 10:59:15 --> ErrorException: finfo_file(C:\xampp\tmp\php98AD.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: rab/uploadrab/insert]
+in SYSTEMPATH\Files\File.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php98AD.tmp): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ci4\\spj\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 137)
+ 2 SYSTEMPATH\Files\File.php(137): finfo_file(Object(finfo), 'C:\\xampp\\tmp\\php98AD.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(318): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 APPPATH\Controllers\Rab.php(189): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 [internal function]: App\Controllers\Rab->upload_excel(Object(stdClass))
+ 7 APPPATH\Libraries\GroceryCrud.php(843): call_user_func([...], Object(stdClass))
+ 8 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 9 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:01:39 --> ErrorException: finfo_file(C:\xampp\tmp\phpCBAC.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: rab/uploadrab/insert]
+in SYSTEMPATH\Files\File.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\phpCBAC.tmp): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ci4\\spj\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 137)
+ 2 SYSTEMPATH\Files\File.php(137): finfo_file(Object(finfo), 'C:\\xampp\\tmp\\phpCBAC.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(318): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 APPPATH\Controllers\Rab.php(189): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 [internal function]: App\Controllers\Rab->upload_excel(Object(stdClass))
+ 7 APPPATH\Libraries\GroceryCrud.php(843): call_user_func([...], Object(stdClass))
+ 8 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 9 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:03:26 --> ErrorException: finfo_file(C:\xampp\tmp\php6FB9.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: rab/uploadrab/insert]
+in SYSTEMPATH\Files\File.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php6FB9.tmp): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ci4\\spj\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 137)
+ 2 SYSTEMPATH\Files\File.php(137): finfo_file(Object(finfo), 'C:\\xampp\\tmp\\php6FB9.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(318): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 APPPATH\Controllers\Rab.php(189): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 [internal function]: App\Controllers\Rab->upload_excel(Object(stdClass))
+ 7 APPPATH\Libraries\GroceryCrud.php(843): call_user_func([...], Object(stdClass))
+ 8 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 9 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:07:38 --> ErrorException: finfo_file(C:\xampp\tmp\php4750.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: rab/uploadrab/insert]
+in SYSTEMPATH\Files\File.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php4750.tmp): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ci4\\spj\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 137)
+ 2 SYSTEMPATH\Files\File.php(137): finfo_file(Object(finfo), 'C:\\xampp\\tmp\\php4750.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(318): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 APPPATH\Controllers\Rab.php(189): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 [internal function]: App\Controllers\Rab->upload_excel(Object(stdClass))
+ 7 APPPATH\Libraries\GroceryCrud.php(843): call_user_func([...], Object(stdClass))
+ 8 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 9 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:24:11 --> ErrorException: Undefined variable $judul
+[Method: GET, Route: upload]
+in APPPATH\Views\layout\header.php on line 10.
+ 1 APPPATH\Views\layout\header.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $judul', 'C:\\xampp\\htdocs\\ci4\\spj\\app\\Views\\layout\\header.php', 10)
+ 2 APPPATH\Views\upload_form.php(1): include('C:\\xampp\\htdocs\\ci4\\spj\\app\\Views\\layout\\header.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ci4\\spj\\app\\Views\\upload_form.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('upload_form', [], true)
+ 6 APPPATH\Controllers\Upload.php(25): view('upload_form', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:38:08 --> ErrorException: Undefined variable $filePath
+[Method: POST, Route: upload/uploadrab]
+in APPPATH\Controllers\Upload.php on line 68.
+ 1 APPPATH\Controllers\Upload.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $filePath', 'C:\\xampp\\htdocs\\ci4\\spj\\app\\Controllers\\Upload.php', 68)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:38:30 --> ErrorException: Undefined variable $filePath
+[Method: POST, Route: upload/uploadrab]
+in APPPATH\Controllers\Upload.php on line 68.
+ 1 APPPATH\Controllers\Upload.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $filePath', 'C:\\xampp\\htdocs\\ci4\\spj\\app\\Controllers\\Upload.php', 68)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:39:21 --> ErrorException: finfo_file(C:\xampp\tmp\php4F08.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\Files\File.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php4F08.tmp): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ci4\\spj\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 137)
+ 2 SYSTEMPATH\Files\File.php(137): finfo_file(Object(finfo), 'C:\\xampp\\tmp\\php4F08.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(318): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 APPPATH\Controllers\Upload.php(42): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:40:24 --> ErrorException: finfo_file(C:\xampp\tmp\php45BD.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\Files\File.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php45BD.tmp): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ci4\\spj\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 137)
+ 2 SYSTEMPATH\Files\File.php(137): finfo_file(Object(finfo), 'C:\\xampp\\tmp\\php45BD.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(318): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 APPPATH\Controllers\Upload.php(42): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:41:16 --> ErrorException: finfo_file(C:\xampp\tmp\php112C.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\Files\File.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php112C.tmp): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ci4\\spj\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 137)
+ 2 SYSTEMPATH\Files\File.php(137): finfo_file(Object(finfo), 'C:\\xampp\\tmp\\php112C.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(318): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 APPPATH\Controllers\Upload.php(42): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:46:18 --> ErrorException: finfo_file(C:\xampp\tmp\phpAE16.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\Files\File.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\phpAE16.tmp): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ci4\\spj\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 137)
+ 2 SYSTEMPATH\Files\File.php(137): finfo_file(Object(finfo), 'C:\\xampp\\tmp\\phpAE16.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(318): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 APPPATH\Controllers\Upload.php(42): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:47:36 --> ErrorException: finfo_file(C:\xampp\tmp\phpDE88.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\Files\File.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\phpDE88.tmp): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ci4\\spj\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 137)
+ 2 SYSTEMPATH\Files\File.php(137): finfo_file(Object(finfo), 'C:\\xampp\\tmp\\phpDE88.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(318): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 APPPATH\Controllers\Upload.php(42): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:49:18 --> ErrorException: finfo_file(C:\xampp\tmp\php6D57.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\Files\File.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php6D57.tmp): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ci4\\spj\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 137)
+ 2 SYSTEMPATH\Files\File.php(137): finfo_file(Object(finfo), 'C:\\xampp\\tmp\\php6D57.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(318): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 APPPATH\Controllers\Upload.php(43): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:50:12 --> ErrorException: finfo_file(C:\xampp\tmp\php3EF1.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\Files\File.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php3EF1.tmp): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ci4\\spj\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 137)
+ 2 SYSTEMPATH\Files\File.php(137): finfo_file(Object(finfo), 'C:\\xampp\\tmp\\php3EF1.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(318): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 APPPATH\Controllers\Upload.php(43): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:51:02 --> ErrorException: Undefined variable $file
+[Method: POST, Route: upload/uploadrab]
+in APPPATH\Controllers\Upload.php on line 38.
+ 1 APPPATH\Controllers\Upload.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $file', 'C:\\xampp\\htdocs\\ci4\\spj\\app\\Controllers\\Upload.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:51:17 --> ErrorException: finfo_file(C:\xampp\tmp\php3CFA.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\Files\File.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\xampp\\tmp\\php3CFA.tmp): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ci4\\spj\\vendor\\codeigniter4\\framework\\system\\Files\\File.php', 137)
+ 2 SYSTEMPATH\Files\File.php(137): finfo_file(Object(finfo), 'C:\\xampp\\tmp\\php3CFA.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(318): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 APPPATH\Controllers\Upload.php(46): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:52:34 --> Error: Call to a member function move() on null
+[Method: POST, Route: upload/uploadrab]
+in APPPATH\Controllers\Upload.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:54:43 --> ErrorException: Undefined array key "upload_file"
+[Method: POST, Route: upload/uploadrab]
+in APPPATH\Controllers\Upload.php on line 38.
+ 1 APPPATH\Controllers\Upload.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "upload_file"', 'C:\\xampp\\htdocs\\ci4\\spj\\app\\Controllers\\Upload.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:56:04 --> ErrorException: Undefined array key "upload_file"
+[Method: POST, Route: upload/uploadrab]
+in APPPATH\Controllers\Upload.php on line 38.
+ 1 APPPATH\Controllers\Upload.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "upload_file"', 'C:\\xampp\\htdocs\\ci4\\spj\\app\\Controllers\\Upload.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:56:38 --> ErrorException: Undefined array key "upload_file"
+[Method: POST, Route: upload/uploadrab]
+in APPPATH\Controllers\Upload.php on line 38.
+ 1 APPPATH\Controllers\Upload.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "upload_file"', 'C:\\xampp\\htdocs\\ci4\\spj\\app\\Controllers\\Upload.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:59:19 --> ErrorException: Undefined array key "C"
+[Method: POST, Route: rab/uploadrab/insert]
+in APPPATH\Controllers\Rab.php on line 208.
+ 1 APPPATH\Controllers\Rab.php(208): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "C"', 'C:\\xampp\\htdocs\\ci4\\spj\\app\\Controllers\\Rab.php', 208)
+ 2 [internal function]: App\Controllers\Rab->upload_excel(Object(stdClass))
+ 3 APPPATH\Libraries\GroceryCrud.php(843): call_user_func([...], Object(stdClass))
+ 4 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 5 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 11:59:30 --> Exception: On the state "insert" you must have post data
+[Method: GET, Route: rab/uploadrab/insert]
+in APPPATH\Libraries\GroceryCrud.php on line 2804.
+ 1 APPPATH\Libraries\GroceryCrud.php(4250): App\Libraries\grocery_CRUD_States->getStateInfo()
+ 2 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+ERROR - 2025-07-11 12:01:10 --> mysqli_sql_exception: Unknown column 'Kecamatan' in 'field list' in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `t_...', 0)
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `t_...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `t_...')
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_...', Array, false)
+#4 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert(Array)
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-11 12:01:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Kecamatan' in 'field list'
+[Method: POST, Route: rab/uploadrab/insert]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_rab` (`Kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (:Kecamatan:, :Akun:, :bulan:, :tahun_anggaran:, :Jumlah:, :created_at:, :updated_at:)', [...], false)
+ 2 APPPATH\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert([...])
+ 4 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 5 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 12:01:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Kecamatan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `t_rab` (`Kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'1\', \'Februari\', \'2025\', \'2000\', \'2025-07-11 12:00:57\', \'2025-07-11 12:00:57\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `t_rab` (`Kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'1\', \'Februari\', \'2025\', \'2000\', \'2025-07-11 12:00:57\', \'2025-07-11 12:00:57\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_rab` (`Kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (:Kecamatan:, :Akun:, :bulan:, :tahun_anggaran:, :Jumlah:, :created_at:, :updated_at:)', [...], false)
+ 4 APPPATH\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert([...])
+ 6 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 7 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 12:01:10 --> [Caused by] mysqli_sql_exception: Unknown column 'Kecamatan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `t_rab` (`Kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'1\', \'Februari\', \'2025\', \'2000\', \'2025-07-11 12:00:57\', \'2025-07-11 12:00:57\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `t_rab` (`Kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'1\', \'Februari\', \'2025\', \'2000\', \'2025-07-11 12:00:57\', \'2025-07-11 12:00:57\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `t_rab` (`Kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'1\', \'Februari\', \'2025\', \'2000\', \'2025-07-11 12:00:57\', \'2025-07-11 12:00:57\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_rab` (`Kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (:Kecamatan:, :Akun:, :bulan:, :tahun_anggaran:, :Jumlah:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert([...])
+ 7 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 8 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+ERROR - 2025-07-11 12:05:21 --> mysqli_sql_exception: Unknown column 'Akun' in 'field list' in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `t_...', 0)
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `t_...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `t_...')
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_...', Array, false)
+#4 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert(Array)
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-11 12:05:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Akun' in 'field list'
+[Method: POST, Route: rab/uploadrab/insert]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (:id_kecamatan:, :Akun:, :bulan:, :tahun_anggaran:, :Jumlah:, :created_at:, :updated_at:)', [...], false)
+ 2 APPPATH\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert([...])
+ 4 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 5 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 12:05:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Akun' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'1\', \'Maret\', \'2025\', \'2000\', \'2025-07-11 12:02:59\', \'2025-07-11 12:02:59\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'1\', \'Maret\', \'2025\', \'2000\', \'2025-07-11 12:02:59\', \'2025-07-11 12:02:59\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (:id_kecamatan:, :Akun:, :bulan:, :tahun_anggaran:, :Jumlah:, :created_at:, :updated_at:)', [...], false)
+ 4 APPPATH\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert([...])
+ 6 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 7 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 12:05:21 --> [Caused by] mysqli_sql_exception: Unknown column 'Akun' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'1\', \'Maret\', \'2025\', \'2000\', \'2025-07-11 12:02:59\', \'2025-07-11 12:02:59\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'1\', \'Maret\', \'2025\', \'2000\', \'2025-07-11 12:02:59\', \'2025-07-11 12:02:59\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'1\', \'Maret\', \'2025\', \'2000\', \'2025-07-11 12:02:59\', \'2025-07-11 12:02:59\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (:id_kecamatan:, :Akun:, :bulan:, :tahun_anggaran:, :Jumlah:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert([...])
+ 7 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 8 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 12:05:31 --> Exception: On the state "insert" you must have post data
+[Method: GET, Route: rab/uploadrab/insert]
+in APPPATH\Libraries\GroceryCrud.php on line 2804.
+ 1 APPPATH\Libraries\GroceryCrud.php(4250): App\Libraries\grocery_CRUD_States->getStateInfo()
+ 2 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 12:05:48 --> Exception: On the state "insert" you must have post data
+[Method: GET, Route: rab/uploadrab/insert]
+in APPPATH\Libraries\GroceryCrud.php on line 2804.
+ 1 APPPATH\Libraries\GroceryCrud.php(4250): App\Libraries\grocery_CRUD_States->getStateInfo()
+ 2 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+ERROR - 2025-07-11 12:06:11 --> mysqli_sql_exception: Unknown column 'Akun' in 'field list' in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `t_...', 0)
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `t_...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `t_...')
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_...', Array, false)
+#4 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert(Array)
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-11 12:06:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Akun' in 'field list'
+[Method: POST, Route: rab/uploadrab/insert]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (:id_kecamatan:, :Akun:, :bulan:, :tahun_anggaran:, :Jumlah:, :created_at:, :updated_at:)', [...], false)
+ 2 APPPATH\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert([...])
+ 4 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 5 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 12:06:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Akun' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'1\', \'Februari\', \'2025\', \'2000\', \'2025-07-11 12:05:56\', \'2025-07-11 12:05:56\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'1\', \'Februari\', \'2025\', \'2000\', \'2025-07-11 12:05:56\', \'2025-07-11 12:05:56\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (:id_kecamatan:, :Akun:, :bulan:, :tahun_anggaran:, :Jumlah:, :created_at:, :updated_at:)', [...], false)
+ 4 APPPATH\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert([...])
+ 6 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 7 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 12:06:11 --> [Caused by] mysqli_sql_exception: Unknown column 'Akun' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'1\', \'Februari\', \'2025\', \'2000\', \'2025-07-11 12:05:56\', \'2025-07-11 12:05:56\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'1\', \'Februari\', \'2025\', \'2000\', \'2025-07-11 12:05:56\', \'2025-07-11 12:05:56\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'1\', \'Februari\', \'2025\', \'2000\', \'2025-07-11 12:05:56\', \'2025-07-11 12:05:56\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (:id_kecamatan:, :Akun:, :bulan:, :tahun_anggaran:, :Jumlah:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert([...])
+ 7 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 8 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+ERROR - 2025-07-11 12:07:02 --> mysqli_sql_exception: Unknown column 'Akun' in 'field list' in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `t_...', 0)
+#1 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `t_...')
+#2 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `t_...')
+#3 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_...', Array, false)
+#4 C:\xampp\htdocs\ci4\spj\app\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert(Array)
+#6 C:\xampp\htdocs\ci4\spj\app\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+#7 C:\xampp\htdocs\ci4\spj\app\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+#8 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+#9 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+#10 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ci4\spj\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-11 12:07:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Akun' in 'field list'
+[Method: POST, Route: rab/uploadrab/insert]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (:id_kecamatan:, :Akun:, :bulan:, :tahun_anggaran:, :Jumlah:, :created_at:, :updated_at:)', [...], false)
+ 2 APPPATH\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert([...])
+ 4 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 5 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 12:07:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Akun' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'\', \'Maret\', \'2025\', \'\', \'2025-07-11 12:06:47\', \'2025-07-11 12:06:47\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'\', \'Maret\', \'2025\', \'\', \'2025-07-11 12:06:47\', \'2025-07-11 12:06:47\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (:id_kecamatan:, :Akun:, :bulan:, :tahun_anggaran:, :Jumlah:, :created_at:, :updated_at:)', [...], false)
+ 4 APPPATH\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert([...])
+ 6 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 7 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 12:07:02 --> [Caused by] mysqli_sql_exception: Unknown column 'Akun' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'\', \'Maret\', \'2025\', \'\', \'2025-07-11 12:06:47\', \'2025-07-11 12:06:47\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'\', \'Maret\', \'2025\', \'\', \'2025-07-11 12:06:47\', \'2025-07-11 12:06:47\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (\'\', \'\', \'Maret\', \'2025\', \'\', \'2025-07-11 12:06:47\', \'2025-07-11 12:06:47\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `t_rab` (`id_kecamatan`, `Akun`, `bulan`, `tahun_anggaran`, `Jumlah`, `created_at`, `updated_at`) VALUES (:id_kecamatan:, :Akun:, :bulan:, :tahun_anggaran:, :Jumlah:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH\Models\GroceryCrudModel.php(475): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Libraries\GroceryCrud.php(880): App\Models\GroceryCrudModel->db_insert([...])
+ 7 APPPATH\Libraries\GroceryCrud.php(4329): App\Libraries\grocery_CRUD_Model_Driver->db_insert(Object(stdClass))
+ 8 APPPATH\Controllers\Rab.php(174): App\Libraries\GroceryCrud->render()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('insert')
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 13:25:07 --> ErrorException: Undefined variable $crud
+[Method: GET, Route: rab/uploadrab/add]
+in APPPATH\Controllers\Rab.php on line 130.
+ 1 APPPATH\Controllers\Rab.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $crud', 'C:\\xampp\\htdocs\\ci4\\spj\\app\\Controllers\\Rab.php', 130)
+ 2 [internal function]: App\Controllers\Rab->App\Controllers\{closure}(null, null, Object(stdClass))
+ 3 APPPATH\Libraries\GroceryCrud.php(2416): call_user_func(Object(Closure), null, null, Object(stdClass))
+ 4 APPPATH\Libraries\GroceryCrud.php(1682): App\Libraries\grocery_CRUD_Layout->get_add_input_fields()
+ 5 APPPATH\Libraries\GroceryCrud.php(4288): App\Libraries\grocery_CRUD_Layout->showAddForm()
+ 6 APPPATH\Controllers\Rab.php(175): App\Libraries\GroceryCrud->render()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rab->uploadrab('add')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rab))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 13:50:56 --> ParseError: syntax error, unexpected identifier "session", expecting ":"
+[Method: GET, Route: rab/uploadrab/add]
+in APPPATH\Controllers\Rab.php on line 136.
+ 1 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouter->getRoute('rab/uploadrab/add', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('rab/uploadrab/add')
+ 3 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('rab/uploadrab/add')
+ 4 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 14:05:57 --> ErrorException: Undefined array key 2
+[Method: POST, Route: upload/uploadrab]
+in APPPATH\Controllers\Upload.php on line 65.
+ 1 APPPATH\Controllers\Upload.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'C:\\xampp\\htdocs\\ci4\\spj\\app\\Controllers\\Upload.php', 65)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 14:06:40 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\ModelRab"
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\Model.php on line 822.
+ 1 SYSTEMPATH\Model.php(822): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\ModelRab')
+ 2 SYSTEMPATH\BaseModel.php(824): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\Upload.php(74): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 14:11:08 --> TypeError: CodeIgniter\BaseModel::timeToString(): Argument #1 ($properties) must be of type array, string given, called in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\BaseModel.php on line 933
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\BaseModel.php on line 1765.
+ 1 SYSTEMPATH\BaseModel.php(933): CodeIgniter\BaseModel->timeToString('1')
+ 2 APPPATH\Models\ModelRab.php(58): CodeIgniter\BaseModel->insertBatch([...])
+ 3 APPPATH\Controllers\Upload.php(74): App\Models\ModelRab->uploadExcel([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 14:19:30 --> ErrorException: Undefined variable $insert_data
+[Method: POST, Route: upload/uploadrab]
+in APPPATH\Controllers\Upload.php on line 80.
+ 1 APPPATH\Controllers\Upload.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $insert_data', 'C:\\xampp\\htdocs\\ci4\\spj\\app\\Controllers\\Upload.php', 80)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 14:24:06 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\ModelRab"
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\Model.php on line 822.
+ 1 SYSTEMPATH\Model.php(822): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\ModelRab')
+ 2 SYSTEMPATH\BaseModel.php(824): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Models\ModelRab.php(54): CodeIgniter\Model->insert([...])
+ 5 APPPATH\Controllers\Upload.php(75): App\Models\ModelRab->uploadExcel([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 14:25:14 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\ModelRab"
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\Model.php on line 822.
+ 1 SYSTEMPATH\Model.php(822): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\ModelRab')
+ 2 SYSTEMPATH\BaseModel.php(824): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Models\ModelRab.php(55): CodeIgniter\Model->insert([...])
+ 5 APPPATH\Controllers\Upload.php(75): App\Models\ModelRab->uploadExcel([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 14:26:12 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\ModelRab"
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\Model.php on line 822.
+ 1 SYSTEMPATH\Model.php(822): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\ModelRab')
+ 2 SYSTEMPATH\BaseModel.php(824): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Models\ModelRab.php(55): CodeIgniter\Model->insert([...])
+ 5 APPPATH\Controllers\Upload.php(75): App\Models\ModelRab->uploadExcel([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 14:26:53 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\ModelRab"
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\Model.php on line 822.
+ 1 SYSTEMPATH\Model.php(822): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\ModelRab')
+ 2 SYSTEMPATH\BaseModel.php(824): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Models\ModelRab.php(54): CodeIgniter\Model->insert([...])
+ 5 APPPATH\Controllers\Upload.php(75): App\Models\ModelRab->uploadExcel([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 14:27:37 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\ModelRab"
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\Model.php on line 822.
+ 1 SYSTEMPATH\Model.php(822): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\ModelRab')
+ 2 SYSTEMPATH\BaseModel.php(824): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Models\ModelRab.php(55): CodeIgniter\Model->insert([...])
+ 5 APPPATH\Controllers\Upload.php(75): App\Models\ModelRab->uploadExcel([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 14:28:12 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\ModelRab"
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\Model.php on line 822.
+ 1 SYSTEMPATH\Model.php(822): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\ModelRab')
+ 2 SYSTEMPATH\BaseModel.php(824): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Models\ModelRab.php(55): CodeIgniter\Model->insert([...])
+ 5 APPPATH\Controllers\Upload.php(75): App\Models\ModelRab->uploadExcel([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 14:29:05 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\ModelRab"
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\Model.php on line 822.
+ 1 SYSTEMPATH\Model.php(822): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\ModelRab')
+ 2 SYSTEMPATH\BaseModel.php(824): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Models\ModelRab.php(55): CodeIgniter\Model->insert([...])
+ 5 APPPATH\Controllers\Upload.php(76): App\Models\ModelRab->uploadExcel([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 14:29:13 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\ModelRab"
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\Model.php on line 822.
+ 1 SYSTEMPATH\Model.php(822): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\ModelRab')
+ 2 SYSTEMPATH\BaseModel.php(824): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Models\ModelRab.php(55): CodeIgniter\Model->insert([...])
+ 5 APPPATH\Controllers\Upload.php(75): App\Models\ModelRab->uploadExcel([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 14:30:07 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\ModelRab"
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\Model.php on line 822.
+ 1 SYSTEMPATH\Model.php(822): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\ModelRab')
+ 2 SYSTEMPATH\BaseModel.php(824): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\Upload.php(76): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 14:32:33 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\ModelRab"
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\Model.php on line 822.
+ 1 SYSTEMPATH\Model.php(822): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\ModelRab')
+ 2 SYSTEMPATH\BaseModel.php(824): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\Upload.php(76): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 14:33:58 --> TypeError: CodeIgniter\BaseModel::timeToString(): Argument #1 ($properties) must be of type array, string given, called in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\BaseModel.php on line 933
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\BaseModel.php on line 1765.
+ 1 SYSTEMPATH\BaseModel.php(933): CodeIgniter\BaseModel->timeToString('1')
+ 2 APPPATH\Models\ModelRab.php(17): CodeIgniter\BaseModel->insertBatch([...])
+ 3 APPPATH\Controllers\Upload.php(76): App\Models\ModelRab->Exportexcel([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 14:34:10 --> TypeError: CodeIgniter\BaseModel::timeToString(): Argument #1 ($properties) must be of type array, string given, called in C:\xampp\htdocs\ci4\spj\vendor\codeigniter4\framework\system\BaseModel.php on line 933
+[Method: POST, Route: upload/uploadrab]
+in SYSTEMPATH\BaseModel.php on line 1765.
+ 1 SYSTEMPATH\BaseModel.php(933): CodeIgniter\BaseModel->timeToString('1')
+ 2 APPPATH\Models\ModelRab.php(17): CodeIgniter\BaseModel->insertBatch([...])
+ 3 APPPATH\Controllers\Upload.php(76): App\Models\ModelRab->Exportexcel([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Upload->uploadrab()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Upload))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
+CRITICAL - 2025-07-11 14:47:51 --> ParseError: syntax error, unexpected variable "$output"
+[Method: GET, Route: rab/datarab]
+in APPPATH\Controllers\Rab.php on line 90.
+ 1 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouter->getRoute('rab/datarab', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('rab/datarab')
+ 3 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('rab/datarab')
+ 4 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ci4\\spj\\public\\index.php')
