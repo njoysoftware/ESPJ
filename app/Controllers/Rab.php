@@ -51,7 +51,7 @@ class Rab extends BaseController
             $crud->where('id_kecamatan', session()->get('id_kecamatan')); // Filter kuitansi by the current user's kecamatan
             $crud->columns(['nomor', 'id_akun', 'jumlah', 'bulan', 'tahun_anggaran']);
             $crud->addFields(['id_kecamatan', 'id_akun', 'bulan', 'tahun_anggaran', 'jumlah',  'created_at', 'updated_at']);
-            $crud->requiredFields(['id_kecamatan', 'id_akun', 'bulan', 'tahun_anggaran', 'jumlah']);
+            $crud->requiredFields(['id_akun', 'bulan', 'tahun_anggaran', 'jumlah']);
             $crud->editFields(['id_kecamatan', 'id_akun', 'bulan', 'tahun_anggaran', 'jumlah', 'updated_at']);
             $crud->fieldType('id_kecamatan', 'hidden');
         } else {
